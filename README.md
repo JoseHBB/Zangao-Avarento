@@ -8,9 +8,10 @@ O Zangão Avarento foi um projeto de TCC criado por mim e meus amigos com o obje
 ## Arquivos
 
 Nesse repositório estão armazenados os arquivos que utilizamos durante a produção e uma cópia do relatório final do projeto.
-Para informações sobre o algoritmo do Arduino ou o esquema do circuito e PCB leia: 
+Para informações sobre o algoritmo do Arduino, o esquema do circuito e PCB e o aplicativo leia: 
 - [Arduino](https://github.com/JoseHBB/Zangao-Avarento/blob/main/Arduino_Reference.md)
 - [Esquema Elétrico e PCB](https://github.com/JoseHBB/Zangao-Avarento/blob/main/KicadSchemePCB_Reference.md)
+- [Aplicativo](https://github.com/JoseHBB/Zangao-Avarento/blob/main/App_Reference.md)
 
 ## Criadores do projeto
 
