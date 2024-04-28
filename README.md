@@ -4,9 +4,12 @@
 
 O Zangão Avarento foi um projeto de TCC criado por mim e meus amigos com o objetivo de construir um drone controlado por smartphone e de baixo custo, após a conclusão do projeto estamos disponibilizando o que fizemos para que qualquer pessoa ou organização possa acessa-los.
 
-###
+## Arquivos
 
-O 
+Nesse repositório estão armazenados os arquivos que utilizamos durante a produção e uma cópia do relatório final do projeto.
+Para informações sobre o algoritmo do Arduino ou o esquema do circuito e PCB leia: 
+- [Arduino](https://github.com/JoseHBB/Zangao-Avarento/blob/main/ArduinoReference.md)
+- [Esquema Elétrico e PCB](https://github.com/JoseHBB/Zangao-Avarento/blob/main/KicadSchemePCB_Reference.md)
 
 ## Criadores do projeto
 
@@ -16,7 +19,7 @@ O
 
 ## Contato
 Qualquer dúvida sobre o projeto contate:
-[José Henrique](https://github.com/JoseHBB) |
+- [José Henrique](https://github.com/JoseHBB) |
 Email: josehenribb@gmail.com
 
 ## Licença
