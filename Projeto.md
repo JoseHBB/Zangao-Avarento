@@ -24,6 +24,7 @@ Começamos primeiro definindo o que precisariamos construir.
 - **PCI(Placa de Circuito Impresso):** Como seriam necessários vários componentes eletrônicos para o funcionamento do drone optamos pela produção de uma PCI devido a praticidade e a disponibilidade de uma prototipadora na escola.
 - **Algoritmo:** Com a utilização de um acelerômetro e giroscópio poderiamos pegar dados de rotação e aceleração do drone, o arduino com um algortimo poderia controlar a potência dos motores deixando o drone mais estável com base nesses dados.
 - **Aplicativo:** Seguindo o objetivo de manter um baixo custo iremos utilizar um aplicativo para o controle do drone via bluetooth, o aplicativo foi programado pelo MIT App Inventor.
+
 ## Primeiros passos
 
 ### Carcaça e peças
@@ -47,3 +48,15 @@ Como já tinhamos um algoritmo parcial buscamos primeiramente um teste inicial d
 ### Aplicativo
 
 Nesse início praticamente não fizemos nada em relação ao aplicativo.
+
+## Desenvolvimento 2023
+
+### Placa de Circuito Impresso
+
+Após a conclusão do esquema elétrico começamos o desenvolvimento do diagrama da PCI, durante esse processo foram produzidas várias versôes diferentes que foram aprimoradas com o tempo,
+
+### Carcaça
+
+
+
+
