@@ -55,6 +55,10 @@ Imagens usadas para documentar a evolução do projeto, a estrutura e a placa:
 
 Leitura recomendada: [Galeria.md](Galeria.md)
 
+### `Apresentação TCC Drone.pptx`
+
+Arquivo da apresentação final do TCC usado para defesa e exposição do projeto.
+
 ## Arquivos de documentação
 
 - `README.md`: página inicial da wiki.
@@ -68,6 +72,7 @@ Leitura recomendada: [Galeria.md](Galeria.md)
 ## Arquivos adicionais
 
 - `Relatório.pdf`: relatório final do TCC.
+- `Apresentação TCC Drone.pptx`: apresentação final do TCC.
 - `Planilha com os preços 2022.xlsx`: levantamento de custos e componentes.
 - `LICENSE`: licença do repositório.
 
@@ -79,4 +84,5 @@ Se o objetivo for entender o projeto como um todo, a melhor sequência é:
 2. seguir para [Projeto.md](Projeto.md);
 3. consultar as páginas específicas de mecânica, firmware, eletrônica e app;
 4. usar [Galeria.md](Galeria.md) para apoio visual;
-5. abrir o `Relatório.pdf` para a versão acadêmica consolidada.
+5. consultar a apresentação em `Apresentação TCC Drone.pptx`;
+6. abrir o `Relatório.pdf` para a versão acadêmica consolidada.

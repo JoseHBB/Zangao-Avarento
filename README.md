@@ -28,6 +28,7 @@ Este repositório funciona como a documentação pública do projeto. Aqui estã
 - `App/`: arquivo-fonte do app no MIT App Inventor e APK gerado.
 - `Kicad Scheme-PCB/`: projeto eletrônico e layout da placa.
 - `Images/`: imagens de protótipos, placa, estrutura e esquemas.
+- `Apresentação TCC Drone.pptx`: apresentação final do TCC.
 - `Relatório.pdf`: versão do relatório final do trabalho.
 
 ## Criadores do projeto
