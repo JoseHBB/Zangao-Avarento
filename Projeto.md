@@ -1,62 +1,82 @@
-# Informações sobre a construção do projeto
+# Visão Geral Do Projeto
 
-## Início - Pré 2023 
-Iniciamos o projeto no ano de 2022 como uma versão "beta" para o TCC, no final desse ano nosso grupo conseguiu uma demonstração de como os motores poderiam ser controlados por um smartphone, nosso "drone"
-era apenas uma caixa com quatro motores controlados por um Arduino Nano que recebia sinais de um aplicativo simples feito no MIT App Inventor.
+## Objetivo
 
-<p align="center">
-  <img width="600" alt="caixa" src="Images/Projeto - 2022.jpg"><br/>
-  Caixa que demonstrava o funcionamento dos motores.   
-</p>
+O Zangão Avarento foi desenvolvido como um TCC na área de automação industrial com a proposta de construir um drone experimental de baixo custo controlado por smartphone. A ideia central era integrar mecânica, eletrônica, programação embarcada e comunicação sem fio em uma única plataforma.
 
-Durante esse período compramos os itens que achavá-mos necessários, alguns desses itens acabaram sendo substituídos. 
-Fizemos uma planilha com os itens que iriamos comprar: [Planilha](https://github.com/JoseHBB/Zangao-Avarento/blob/main/Planilha%20com%20os%20pre%C3%A7os%202022.xlsx)<br/>
-<sub/>É necessário baixar a planilha pois o Github não consegue mostrar esse tipo de arquivo.<sub/>
+## Proposta técnica
 
-## Início - 2023
-Em 2023 começamos com o objetivo de melhorar o que já tinhamos para finalmente construir um drone, nessa etapa já tinhamos uma noção sobre o circuito de controle do motor utilizando MOSFETs e a programação do Arduino para esse controle e recepção de dados de um smartphone via bluetooth. <br/> 
+O projeto foi organizado em quatro frentes principais:
 
-### O que iriamos fazer
+- `Estrutura mecânica`: carcaça, suporte dos motores e adaptação das hélices.
+- `Eletrônica`: esquema elétrico, condicionamento de alimentação e placa de circuito impresso.
+- `Controle embarcado`: código em Arduino para acionar os motores e receber comandos.
+- `Aplicativo`: interface mobile criada no MIT App Inventor para enviar comandos via Bluetooth.
 
-Começamos primeiro definindo o que precisariamos construir.
-- **Carcaça:** Definimos que a carcaça seria feita com impressão 3D devido a disponibilidade do recurso na escola, houveram três prototipos até o que foi utilizado no drone final.
-- **Esquema elétrico completo:** Devido a alguns problemas encontrados no projeto parcial de 2022, percebemos que seria necessário refazer o esquema elétrico dos motores e também adicionar todas as peças que precisariamos para o circuito. 
-- **PCI(Placa de Circuito Impresso):** Como seriam necessários vários componentes eletrônicos para o funcionamento do drone optamos pela produção de uma PCI devido a praticidade e a disponibilidade de uma prototipadora na escola.
-- **Algoritmo:** Com a utilização de um acelerômetro e giroscópio poderiamos pegar dados de rotação e aceleração do drone, o arduino com um algortimo poderia controlar a potência dos motores deixando o drone mais estável com base nesses dados.
-- **Aplicativo:** Seguindo o objetivo de manter um baixo custo iremos utilizar um aplicativo para o controle do drone via bluetooth, o aplicativo foi programado pelo MIT App Inventor.
+## Linha do tempo
 
-## Primeiros passos
+### Etapa inicial - 2022
 
-### Carcaça e peças
-
-Quando começamos a pensar sobre como iriamos fazer a carcaça percebemos que tinhamos que pensar em uma de forma de conectar os motores a carcaça e as hélices aos motores. Nesse momento haviamos cometido um erro, devido a ter comprado essas peças de forma separada e elas seram para reposição de um drone pré-fabricado estavam faltando partes chave para que essas peças conseguisem se encaixar principalmente a parte mecânica que envolvia transferir o movimento do motor para as hélices.<br/>
-Decidimos seguir uma rota diferente da planejada, compramos 2 kits de hélices, motores e suportes prontos assim facilitando a construção da carcaça. Com a ajuda de um professor de mecânica conseguimos produzir um protótipo que já estava propenso a testes.
-
-### Esquema e Placa de Circuito Impresso
-
-Sobre a PCI começamos o fazendo o esquema elétrico, foi utilizado o software Kicad 6.0 para o esquema e o blueprint da PCI que iriamos prototipar depois, nesse esquema colocamos todas as conexões que seriam necessárias tanto de potência (motores) e lógica (sensores). Esse processo foi consideravelmente tranquilo devido as nossas aulas de elétrica, a parte mais trabalhosa foi a necessidade de adicionar esquema de peças que não estão por padrão no sistema. 
+Em 2022 o grupo desenvolveu uma prova de conceito para validar o controle dos motores por smartphone. Nessa fase, o sistema ainda não era um drone completo: tratava-se de uma estrutura simples com quatro motores, controlados por um Arduino Nano e por um aplicativo Android via Bluetooth.
 
 <p align="center">
-  <img width="600" alt="esquema" src="Images/Esquema_Eletrico.png"><br/>
-  Esquema elétrico feito no Kicad 6.0.   
+  <img width="650" alt="Protótipo de 2022" src="Images/Projeto - 2022.jpg"><br/>
+  Protótipo inicial utilizado para demonstrar o acionamento dos motores.
 </p>
 
-### Algoritmo
+Ainda nesse período foi criada uma planilha de custos para levantar os componentes necessários:
 
-Como já tinhamos um algoritmo parcial buscamos primeiramente um teste inicial de funcionamento de funções simples como __subir()__ que iria ligar todos os motores em uma alta potência para que o drone ganhe altitude. 
+- [Planilha com os preços 2022.xlsx](Planilha%20com%20os%20pre%C3%A7os%202022.xlsx)
+
+## Evolução em 2023
+
+Com a base validada em 2022, o trabalho passou a focar na construção de uma versão mais completa e melhor documentada. As decisões principais dessa fase foram:
+
+- Produzir uma carcaça compatível com os conjuntos de motor e hélice disponíveis.
+- Refazer o esquema elétrico para acomodar potência e lógica no mesmo projeto.
+- Projetar uma PCI própria para organizar os componentes.
+- Manter o controle via smartphone para preservar a proposta de baixo custo.
+- Preparar o sistema para uso de sensores como giroscópio/acelerômetro.
+
+## O que foi desenvolvido
+
+### Estrutura e prototipagem
+
+A construção mecânica passou por ajustes porque os primeiros motores e hélices comprados separadamente não se encaixavam de forma adequada. A solução foi utilizar conjuntos prontos de hélices, motores e suportes, reduzindo o esforço de adaptação mecânica e acelerando os testes.
+
+Veja mais em [Construção mecânica e estrutura](Construcao_Mecanica.md).
+
+### Eletrônica e PCB
+
+O esquema elétrico e a placa foram desenvolvidos no KiCad 6.0. A eletrônica reúne:
+
+- Arduino Nano como controlador principal.
+- Módulo Bluetooth HC-06 para comunicação com o aplicativo.
+- Módulo giroscópio MPU-6050/GY-521 para sensoriamento.
+- Conversor step-up MT3608 para alimentação em 5 V.
+- Quatro MOSFETs IRF640 para acionamento dos motores.
+
+<p align="center">
+  <img width="650" alt="Esquema elétrico" src="Images/Esquema_Eletrico.png"><br/>
+  Esquema elétrico desenvolvido no KiCad.
+</p>
+
+Detalhes completos em [Esquema elétrico e PCB no KiCad](KicadSchemePCB_Reference.md).
+
+### Firmware
+
+O firmware disponível no repositório mostra a lógica base de acionamento dos quatro motores por PWM e a separação das funções de comando, como subir, descer, deslocar e girar.
+
+Detalhes em [Firmware e lógica de controle no Arduino](Arduino_Reference.md).
 
 ### Aplicativo
 
-Nesse início praticamente não fizemos nada em relação ao aplicativo.
+O aplicativo foi desenvolvido no MIT App Inventor e é responsável pelo envio dos comandos ao sistema via Bluetooth. O repositório inclui tanto o projeto editável quanto o APK gerado.
 
-## Desenvolvimento 2023
+Detalhes em [Aplicativo Android](App_Reference.md).
 
-### Placa de Circuito Impresso
+## Resultado do repositório
 
-Após a conclusão do esquema elétrico começamos o desenvolvimento do diagrama da PCI, durante esse processo foram produzidas várias versôes diferentes que foram aprimoradas com o tempo,
+Este repositório preserva os principais artefatos do TCC como uma base de consulta pública. O objetivo não é apenas guardar os arquivos finais, mas também permitir que outras pessoas entendam como o projeto foi estruturado e possam estudar ou reaproveitar partes dele.
 
-### Carcaça
-
-
-
-
+Para uma visão consolidada dos arquivos, consulte [Arquivos e recursos do repositório](Arquivos_e_Recursos.md).

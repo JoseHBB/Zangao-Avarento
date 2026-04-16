@@ -1,17 +1,34 @@
-# Zangão Avarento | Drone econômico controlado por smartphone
+# Zangão Avarento
 
-## Sobre o projeto
+Wiki pública do projeto de TCC de automação industrial focado no desenvolvimento de um drone de baixo custo controlado por smartphone.
 
-O Zangão Avarento foi um projeto de TCC criado por mim e meus amigos com o objetivo de construir um drone controlado por smartphone e de baixo custo, após a conclusão do projeto estamos disponibilizando o que fizemos para que qualquer pessoa ou organização possa acessa-los.<br/>
-[Informações mais detalhadas sobre o projeto.](https://github.com/JoseHBB/Zangao-Avarento/blob/main/Projeto.md)
+<p align="center">
+  <img width="700" alt="Drone final" src="Images/Drone_Cima_New.png">
+</p>
 
-## Arquivos
+## Sobre
 
-Nesse repositório estão armazenados os arquivos que utilizamos durante a produção e uma cópia do relatório final do projeto.
-Para informações sobre o algoritmo do Arduino, o esquema do circuito e PCB e o aplicativo leia: 
-- [Arduino](https://github.com/JoseHBB/Zangao-Avarento/blob/main/Arduino_Reference.md)
-- [Esquema Elétrico e PCB](https://github.com/JoseHBB/Zangao-Avarento/blob/main/KicadSchemePCB_Reference.md)
-- [Aplicativo](https://github.com/JoseHBB/Zangao-Avarento/blob/main/App_Reference.md)
+O Zangão Avarento nasceu como um projeto de TCC com o objetivo de demonstrar que era possível montar uma plataforma de voo com controle por celular utilizando componentes acessíveis, fabricação própria da placa e desenvolvimento do firmware e do aplicativo.
+
+Este repositório funciona como a documentação pública do projeto. Aqui estão reunidos o histórico de desenvolvimento, os arquivos de eletrônica e PCB, os códigos do Arduino, os arquivos do aplicativo, imagens do processo e o relatório final.
+
+## Navegação da wiki
+
+- [Visão geral do projeto](Projeto.md)
+- [Construção mecânica e estrutura](Construcao_Mecanica.md)
+- [Firmware e lógica de controle no Arduino](Arduino_Reference.md)
+- [Esquema elétrico e PCB no KiCad](KicadSchemePCB_Reference.md)
+- [Aplicativo Android](App_Reference.md)
+- [Galeria de imagens](Galeria.md)
+- [Arquivos e recursos do repositório](Arquivos_e_Recursos.md)
+
+## Estrutura resumida
+
+- `Arduino/`: códigos e rascunhos do firmware.
+- `App/`: arquivo-fonte do app no MIT App Inventor e APK gerado.
+- `Kicad Scheme-PCB/`: projeto eletrônico e layout da placa.
+- `Images/`: imagens de protótipos, placa, estrutura e esquemas.
+- `Relatório.pdf`: versão do relatório final do trabalho.
 
 ## Criadores do projeto
 
@@ -20,10 +37,12 @@ Para informações sobre o algoritmo do Arduino, o esquema do circuito e PCB e o
 - José Henrique Batista Borges
 
 ## Contato
-Qualquer dúvida sobre o projeto contate:
-- [José Henrique](https://github.com/JoseHBB) |
-Email: josehenribb@gmail.com
+
+Qualquer dúvida sobre o projeto:
+
+- [José Henrique](https://github.com/JoseHBB)
+- `josehenribb@gmail.com`
 
 ## Licença
 
-Licença do MIT para uso comercial de pesquisa e pessoal.
+Este repositório utiliza a licença MIT para fins de estudo, pesquisa, uso pessoal e uso comercial conforme os termos do arquivo [LICENSE](LICENSE).
