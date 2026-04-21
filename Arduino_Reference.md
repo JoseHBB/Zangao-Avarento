@@ -9,7 +9,9 @@ Os arquivos da pasta `Arduino/` registram a base do firmware utilizado para o co
 - `Arduino/Drone_codigo.ino`: definições principais, variáveis e comunicação serial por software.
 - `Arduino/Drone_codigo_functions.ino`: funções de acionamento dos motores.
 - `Arduino/Drone_codigo_comments.ino`: descrição textual dos comandos previstos.
-- `Arduino/Drone_codigo_base.ino`: estrutura vazia de `setup()` e `loop()`.
+- `Arduino/Drone_codigo_base.ino`: `setup()` e `loop()` com leitura Bluetooth e despacho de comandos.
+
+Com a atualização mais recente do repositório, os quatro arquivos acima agora representam o fluxo completo da lógica de controle usada nos testes do projeto.
 
 ## Base eletrônica controlada pelo firmware
 
@@ -46,6 +48,46 @@ O código separa a intensidade dos movimentos por tipo de ação:
 
 Essa divisão simplifica o ajuste da potência aplicada aos motores em cada situação.
 
+Também aparecem variáveis de estado para controlar o comportamento geral:
+
+- `stoped`: flag de estado para indicar se o sistema está parado.
+- `vel_atual`: referência da velocidade atual aplicada ao conjunto.
+- `vel_parado` e `vel_start`: base para manter rotação mínima e partida.
+
+## Fluxo de execução do firmware
+
+O funcionamento foi dividido em um fluxo simples e direto:
+
+1. `setup()`
+2. inicializa serial USB (`Serial.begin(9600)`)
+3. inicializa serial Bluetooth (`HC_06.begin(9600)`)
+4. inicializa MPU-6050 (`start_gyro()`)
+
+No `loop()` o código repete o ciclo:
+
+1. faz leitura do sensor (`read_gyro()`)
+2. espera um comando Bluetooth chegar (`HC_06.available()`)
+3. converte o comando recebido para inteiro (`parseInt()`)
+4. usa `switch` para disparar a ação correspondente
+5. se o comando não estiver mapeado, executa `parado_no_ar()`
+
+Esse formato deixa o firmware orientado a comando remoto: cada número recebido representa uma função de controle de atitude/movimento.
+
+## Mapeamento de comandos Bluetooth
+
+No `switch` de `Drone_codigo_base.ino`, os códigos são:
+
+- `100`: `start()`
+- `101`: `stop()`
+- `102`: `subir()`
+- `103`: `descer()`
+- `104`: `frente()`
+- `105`: `traz()`
+- `106`: `direita()`
+- `107`: `esquerda()`
+- `108`: `girar_horario()`
+- `109`: `girar_anti_horario()`
+
 ## Funções implementadas
 
 As funções presentes em `Drone_codigo_functions.ino` representam os movimentos básicos do drone:
@@ -61,6 +103,23 @@ As funções presentes em `Drone_codigo_functions.ino` representam os movimentos
 - `girar_horario()`: altera dois motores para rotação no sentido horário.
 - `girar_anti_horario()`: altera dois motores para rotação no sentido anti-horário.
 
+Na prática, os movimentos são obtidos por diferença de PWM entre pares de motores:
+
+- subida/descida: alteração conjunta dos quatro motores;
+- translação horizontal: aumenta dois motores e reduz os opostos;
+- guinada (yaw): aumenta motores de uma diagonal e reduz os da diagonal contrária.
+
+Esse método é consistente com o comportamento esperado de um quadricóptero em configuração de quatro rotores com controle diferencial de empuxo.
+
+## Leitura do giroscópio/acelerômetro
+
+As funções de sensor já estão presentes no código:
+
+- `start_gyro()`: inicia o MPU-6050 e define faixas de medição/filtro.
+- `read_gyro()`: captura aceleração (`a`), rotação (`g`) e temperatura (`temp`).
+
+Mesmo sem malha de controle fechada implementada nesta versão, essa base já prepara o firmware para evolução com estabilização automática e correção por realimentação.
+
 ## Lógica documentada nos comentários
 
 O arquivo `Drone_codigo_comments.ino` resume os seis blocos de comportamento previstos:
@@ -74,9 +133,9 @@ O arquivo `Drone_codigo_comments.ino` resume os seis blocos de comportamento pre
 
 ## Escopo do que está no repositório
 
-Os arquivos disponíveis representam a base do algoritmo e a divisão das funções principais. O repositório não contém, de forma completa nesse diretório, uma versão final consolidada com toda a lógica de leitura Bluetooth, estabilização por sensor e integração final em `setup()` e `loop()`.
+Os arquivos disponíveis representam a implementação funcional de controle por comandos Bluetooth e organização da lógica por funções de voo/movimento. A parte de estabilização por sensor ainda aparece como base de leitura e preparação da arquitetura.
 
-Ainda assim, a documentação é útil para entender a arquitetura pensada:
+A documentação é útil para entender a arquitetura adotada:
 
 - um comando vindo do app;
 - a interpretação desse comando no Arduino;

@@ -63,6 +63,13 @@
   PCB isolada.
 </p>
 
+## Vídeos de funcionamento
+
+Os testes e demonstrações mais recentes também estão documentados em vídeo:
+
+- [Teste das funções de controle](Videos/Video%20-%20Teste%20fun%C3%A7%C3%B5es.mp4)
+- [Demonstração de voo](Videos/Video%20-%20Voo.mp4)
+
 ## Navegação relacionada
 
 - [Visão geral do projeto](Projeto.md)

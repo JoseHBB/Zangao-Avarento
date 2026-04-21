@@ -55,6 +55,15 @@ Imagens usadas para documentar a evolução do projeto, a estrutura e a placa:
 
 Leitura recomendada: [Galeria.md](Galeria.md)
 
+### `Videos/`
+
+Vídeos de demonstração e validação do funcionamento:
+
+- `Video - Teste funções.mp4`
+- `Video - Voo.mp4`
+
+Leitura recomendada: [Galeria.md](Galeria.md)
+
 ### `Apresentação TCC Drone.pptx`
 
 Arquivo da apresentação final do TCC usado para defesa e exposição do projeto.
@@ -75,6 +84,8 @@ Arquivo da apresentação final do TCC usado para defesa e exposição do projet
 - `Apresentação TCC Drone.pptx`: apresentação final do TCC.
 - `Planilha com os preços 2022.xlsx`: levantamento de custos e componentes.
 - `LICENSE`: licença do repositório.
+- `Videos/Video - Teste funções.mp4`: demonstração das funções de comando.
+- `Videos/Video - Voo.mp4`: demonstração prática de voo.
 
 ## Como usar este repositório
 
