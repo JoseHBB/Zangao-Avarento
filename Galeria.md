@@ -67,13 +67,8 @@
 
 Os testes e demonstrações mais recentes também estão documentados em vídeo:
 
-- [Teste das funções de controle (versão web)](Videos/Video%20-%20Teste%20funcoes%20(web).mp4)
-- [Demonstração de voo (versão web)](Videos/Video%20-%20Voo%20(web).mp4)
-
-Arquivos originais (qualidade máxima):
-
-- [Teste das funções de controle (original)](Videos/Video%20-%20Teste%20fun%C3%A7%C3%B5es.mp4)
-- [Demonstração de voo (original)](Videos/Video%20-%20Voo.mp4)
+- [Teste das funções de controle](Videos/Video%20-%20Teste%20fun%C3%A7%C3%B5es.mp4)
+- [Demonstração de voo](Videos/Video%20-%20Voo.mp4)
 
 ## Navegação relacionada
 
