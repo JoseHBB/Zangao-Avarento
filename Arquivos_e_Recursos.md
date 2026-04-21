@@ -59,6 +59,8 @@ Leitura recomendada: [Galeria.md](Galeria.md)
 
 Vídeos de demonstração e validação do funcionamento:
 
+- `Video - Teste funcoes (web).mp4`
+- `Video - Voo (web).mp4`
 - `Video - Teste funções.mp4`
 - `Video - Voo.mp4`
 
@@ -84,6 +86,8 @@ Arquivo da apresentação final do TCC usado para defesa e exposição do projet
 - `Apresentação TCC Drone.pptx`: apresentação final do TCC.
 - `Planilha com os preços 2022.xlsx`: levantamento de custos e componentes.
 - `LICENSE`: licença do repositório.
+- `Videos/Video - Teste funcoes (web).mp4`: versão otimizada para visualização web.
+- `Videos/Video - Voo (web).mp4`: versão otimizada para visualização web.
 - `Videos/Video - Teste funções.mp4`: demonstração das funções de comando.
 - `Videos/Video - Voo.mp4`: demonstração prática de voo.
 
